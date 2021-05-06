@@ -37,7 +37,7 @@ namespace ProgAvanzada01
                         }
                         else
                         {
-                            Console.WriteLine("\nYa ingresaste esta letra");
+                            Console.WriteLine("\nYa ingresaste esa letra.");
                         }
                     }
                     else
@@ -45,7 +45,7 @@ namespace ProgAvanzada01
                         trys--;
                         Console.WriteLine($"\nFallaste, te quedan {trys} intentos.");
 
-                        if (trys == 0)
+                        if (trys < 1)
                         {
                             Console.WriteLine($"\nHas perdido, la palabra era {word}.");
                             break;
@@ -92,7 +92,7 @@ namespace ProgAvanzada01
             bool completed = false;
             if (word.Equals(new String(guess)))
             {
-                Console.WriteLine($"\nFelicidades has ganado! La palabra era {word}.");
+                Console.WriteLine($"\nFelicidades, has ganado! La palabra era {word}.");
                 completed = true;
             }
             return completed;
